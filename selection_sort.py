@@ -48,6 +48,6 @@ if __name__ == "__main__":
 
     selection_sort_performance(False)
 
-
+# en üstte yorum satiri icindeki kontrol
 # # dk 29 deki data.txt ye dönüstürme ve o datayi görsellestirmeyi tam anlamadim.
 # # okula vpn ile baglanma
