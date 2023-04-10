@@ -31,7 +31,9 @@ def merge(lst, left, middle, right):
     >>> lst
     [1, 2, 3, 4]
     """
-    pass  # Add your implementation here
+    # pass  # Add your implementation here
+    left_part = lst[left:middle]
+    right_part = lst[middle:right]
 
 
 def merge_sort(lst):
