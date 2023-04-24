@@ -1,0 +1,7 @@
+Natürlich würde ich merge_sort verwenden, weil es viel schneller ist als min_sort, 
+und diese Geschwindigkeit macht sich bei großen Datentypen noch stärker bemerkbar. 
+Sogar beträgt die Worst-Case-Zeitkomplexität des Minsort-Algorithmus  O(n^2), da für jede 
+Iteration des Algorithmus ein Minimum aus der unsortierten Liste gefunden und an den Anfang verschoben wird.
+Da dieser Vorgang für jeden Wert in der Liste durchgeführt werden muss, führt dies zu einer quadratischen Zeitkomplexität.
+Aus der anderen Seite beträgt die Worst-Case-Zeitkomplexität des Merge-Sort-Algorithmus  O(nlog(n)),
+wo n die Anzahl der Elemente in der Eingabeliste ist. 
