@@ -34,7 +34,8 @@ def min_sort(array):
 
 
 def min_sort_timing():
-    """Run MinSort for arrays of increasing size. For each size, pick an array
+    """
+    Run MinSort for arrays of increasing size. For each size, pick an array
     with the elements in reverse order, so that MinSort actually has something
     to do.
     """
@@ -59,3 +60,6 @@ if __name__ == "__main__":
     # print(min_sort([5, 4, 3, 2, 1]))
     # print(min_sort([]))
     min_sort_timing()
+
+
+
