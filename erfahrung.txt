@@ -5,3 +5,7 @@ Iteration des Algorithmus ein Minimum aus der unsortierten Liste gefunden und an
 Da dieser Vorgang für jeden Wert in der Liste durchgeführt werden muss, führt dies zu einer quadratischen Zeitkomplexität.
 Aus der anderen Seite beträgt die Worst-Case-Zeitkomplexität des Merge-Sort-Algorithmus  O(nlog(n)),
 wo n die Anzahl der Elemente in der Eingabeliste ist. 
+
+Es fiel mir schwer, die Verwendung von Ubuntu und Vim zu verstehen und ich habe viele Stunden damit verbracht,
+sie zu verstehen. Ich hatte auch einige Schwierigkeiten, die Beschreibung der Merge-Funktion zu verstehen.
+Ich habe mindestens 10 Stunden gebraucht, um diesen Auftrag zu erledigen.
