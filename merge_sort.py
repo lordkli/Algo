@@ -47,12 +47,12 @@ def merge(lst: list, left: int, middle: int, right:int)->list:
             lst[reihe] = right_part[right_index]
             right_index += 1
         reihe += 1
-    
+    # for the remaining part
     while left_index < len(left_part):
         lst[reihe] = left_part[left_index]
         left_index += 1
         reihe += 1
-    
+    # for the remaining part
     while right_index < len(right_part):
         lst[reihe] = right_part[right_index]
         right_index += 1
@@ -103,12 +103,12 @@ def merge_sort(lst: list)->list:
     True
 
     """
-    # empty or one-element list is already sorted
+    # empty or one element list is already sorted
     if len(lst) <= 1:
         return lst
 
     size = 1
-    # Loop until all elements are sorted
+    # loop until all elements are sorted
     while size < len(lst):
         for left in range(0, len(lst), 2*size):
             middle = left + size
