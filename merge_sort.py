@@ -12,7 +12,7 @@ Patrick Brosi <brosi@cs.uni-freiburg.de>
 import time
 import random
 
-def merge(lst, left, middle, right):
+def merge(lst: list, left: int, middle: int, right:int)->list:
     """
     Merge lst[left:middle] and lst[middle:right], overwriting lst[left:right]
     with the result. Use the algorithm explained in Vorlesung 1.
@@ -32,22 +32,22 @@ def merge(lst, left, middle, right):
     >>> lst
     [1, 2, 3, 4]
     """
-    # pass  # Add your implementation here
     left_part = lst[left:middle]
     left_index = 0
     right_part = lst[middle:right]
     right_index = 0
     reihe = left
-    
+    # Here, it compares the elements of the left and right arrays in merge_sort logic 
+    # during merging and places them in the list to get an ordered list
     while left_index < len(left_part) and right_index < len(right_part):
-        if left_part[left_index] < right_part[right_index]:  #! <= or <
+        if left_part[left_index] < right_part[right_index]:
             lst[reihe] = left_part[left_index]
             left_index += 1
         else:
             lst[reihe] = right_part[right_index]
             right_index += 1
         reihe += 1
-        
+    
     while left_index < len(left_part):
         lst[reihe] = left_part[left_index]
         left_index += 1
@@ -59,11 +59,7 @@ def merge(lst, left, middle, right):
         reihe += 1
     return lst
 
-# print(merge([4, 3, 2, 1], 0, 1, 2))
-# print(merge([3, 4, 2, 1], 2, 3, 4))
-# print(merge([3, 4, 1, 2], 0, 2, 4))
-
-def merge_sort(lst):
+def merge_sort(lst: list)->list:
     """
     Sort the input list lst using the *iterative* MergeSort algorithm, as
     explained in Vorlesung 1.
@@ -108,41 +104,19 @@ def merge_sort(lst):
 
     """
     # empty or one-element list is already sorted
-    if len(lst) < 2:
+    if len(lst) <= 1:
         return lst
 
-    # Initialize the size of the sorted subsequences
     size = 1
-
-    # Loop until all the elements are sorted
+    # Loop until all elements are sorted
     while size < len(lst):
-        # Loop over the list by pairs of subsequences of size "size"
         for left in range(0, len(lst), 2*size):
             middle = left + size
             right = min(left + 2*size, len(lst))
             merge(lst, left, middle, right)
-
-        # Double the size of the sorted subsequences
+        # 2x the size of the sorted subsequences
         size *= 2
     return lst
-
-# print(merge_sort([]))
-# print(merge_sort([1]))
-# print(merge_sort([1, 4, -3]))
-# print(merge_sort([1, 2, 3, 4]))
-# print(merge_sort([4, 3, 2, 1]))
-# print(merge_sort([1, 4, 2, 3]))
-
-
-# def main():
-#     """ Perform test sortings and output their timings. """
-#     sizes = [10, 100, 1000, 10000]
-#     for size in sizes:
-#         lst = [random.randint(-1000, 1000) for _ in range(size)]
-#         start_time = time.time()
-#         merge_sort(lst)
-#         end_time = time.time()
-#         print(f"Size: {size}, Time: {end_time - start_time} seconds.")
 
 def main():
     """ Perform test sortings and output their timings. """
